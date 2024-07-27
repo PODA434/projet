@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation d'hôtel - Bobo-Dioulasso</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="C:\Users\HP\Desktop\projet\images\logo.jpg" alt="Logo de la ville">S
+        <h1>Réservation d'hôtel à Bobo-Dioulasso</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="patrimoine.html">Patrimoine</a></li>
+                <li><a href="reservation.html">Réservation d'hôtel</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Réservez votre hôtel à Bobo-Dioulasso</h2>
+            <form action="submit_reservation.html" method="post">
+                <label for="hotel-type">Type d'hôtel :</label>
+                <select id="hotel-type" name="hotel-type" required>
+                    <option value="">Sélectionnez un type d'hôtel</option>
+                    <option value="luxury">Hôtel de luxe (ex : Hôtel Sissiman)</option>
+                    <option value="business">Hôtel d'affaires (ex : Hôtel l'Amitié)</option>
+                    <option value="budget">Hôtel économique (ex : Hôtel le Pacha)</option>
+                    <option value="boutique">Hôtel boutique (ex : Hôtel Villa Rose)</option>
+                </select>
+                <br><br>
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="check-in">Date d'arrivée :</label>
+                <input type="date" id="check-in" name="check-in" required>
+                
+                <label for="check-out">Date de départ :</label>
+                <input type="date" id="check-out" name="check-out" required>
+                
+                <label for="guests">Nombre de personnes :</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+                <br><br>
+                <label for="requests">Demandes spéciales :</label>
+                <textarea id="requests" name="requests" rows="4" cols="50"></textarea>
+                <input type="submit" value="Réserver">
+                <br><br>
+        
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bobo-Dioulasso</p>
+    </footer>
+</body>
+</html>

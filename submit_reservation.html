@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation soumise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="C:\Users\HP\Desktop\projet\images\logo.jpg" alt="Logo de la ville">
+        <h1>Réservation soumise avec succès</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="patrimoine.html">Patrimoine</a></li>
+                <li><a href="reservation.html">Réservation d'hôtel</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Merci pour votre réservation</h2>
+            <p>Votre demande de réservation a été reçue. Voici les détails que vous avez soumis :</p>
+            <ul>
+                <li><strong>Type d'hôtel :</strong> <?php echo htmlspecialchars($_POST['hotel-type']); ?></li>
+                <li><strong>Nom :</strong> <?php echo htmlspecialchars($_POST['name']); ?></li>
+                <li><strong>Email :</strong> <?php echo htmlspecialchars($_POST['email']); ?></li>
+                <li><strong>Date d'arrivée :</strong> <?php echo htmlspecialchars($_POST['check-in']); ?></li>
+                <li><strong>Date de départ :</strong> <?php echo htmlspecialchars($_POST['check-out']); ?></li>
+                <li><strong>Nombre de personnes :</strong> <?php echo htmlspecialchars($_POST['guests']); ?></li>
+                <li><strong>Demandes spéciales :</strong> <?php echo nl2br(htmlspecialchars($_POST['requests'])); ?></li>
+            </ul>
+            <p>Nous vous contacterons prochainement pour confirmer votre réservation.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bobo-Dioulasso</p>
+    </footer>
+</body>
+</html>
